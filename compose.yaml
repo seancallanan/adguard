@@ -1,15 +1,15 @@
 services:
-    adguardhome:
-        container_name: adguard
-        restart: unless-stopped
-        volumes:
-            - '/home/scallanan/work/adguard/data:/opt/adguardhome/work'
-            - '/home/scallanan/work/adguard/config:/opt/adguardhome/conf'
-        ports:
-            - '53:53/tcp'
-            - '53:53/udp'
-            - '1010:80/tcp'
-            - '4433:443/tcp'
-            - '4433:443/udp'
-            - '3000:3000/tcp'
-        image: adguard/adguardhome
+  adguardhome:
+    image: adguard/adguardhome
+    container_name: adguard
+    restart: unless-stopped
+    volumes:
+      - '/home/scallanan/work/adguard/data:/opt/adguardhome/work'
+      - '/home/scallanan/work/adguard/config:/opt/adguardhome/conf'
+    ports:
+      - '53:53/tcp'
+      - '53:53/udp'
+      - '1010:80/tcp'
+      - '4433:443/tcp'
+      - '4433:443/udp'
+      - '3000:3000/tcp'
